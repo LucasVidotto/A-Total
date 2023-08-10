@@ -1,0 +1,88 @@
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile,
+.contact,
+.skills,
+.media,
+.table,
+.link {
+  background-color: #fff;
+  border: solid 2px #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.8);
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  color: #ccc;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+}
+
+section ul {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
