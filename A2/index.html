@@ -7,53 +7,92 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #007bff;
+            background-color: #343a40;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
         }
 
         main {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        form section {
-            margin-bottom: 1.5rem;
+        form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        label {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 16px;
         }
 
         label {
             display: block;
             font-weight: bold;
+            color: #343a40;
             margin-bottom: 0.5rem;
+            transform-origin: top left;
+            transition: transform 0.3s ease-out;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
+        /* Estilizando rótulos flutuantes */
+        input:focus ~ label, textarea:focus ~ label, select:focus ~ label {
+            transform: translateY(-1.2rem) scale(0.8);
+        }
+
+        /* Estilizando campos obrigatórios */
+        input:required:invalid, textarea:required:invalid, select:required:invalid {
+            border-color: #dc3545;
+        }
+
+        input:required:invalid + span, textarea:required:invalid + span, select:required:invalid + span {
+            display: block;
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 0.2rem;
+        }
+
+        /* Estilizando campos preenchidos corretamente */
+        input:required:valid, textarea:required:valid, select:required:valid {
+            border-color: #28a745;
+        }
+
+        input:required:valid + span, textarea:required:valid + span, select:required:valid + span {
+            display: none;
         }
 
         button {
-            background-color: #007bff;
+            background-color: #343a40;
             color: #fff;
             border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            padding: 0.7rem 1rem;
+            border-radius: 6px;
             font-size: 18px;
             cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #495057;
         }
     </style>
 </head>
@@ -63,54 +102,45 @@
     </header>
     <main>
         <form>
-            <section>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </section>
+           
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-            <section>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            <section>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números, 10 dígitos">
-            </section>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números, 10 dígitos">
 
-            <section>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-            </section>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
 
-            <section>
-                <label for="sexo">Sexo:</label>
-                <select id="sexo" name="sexo">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </section>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
 
-            <section>
-                <label for="nascimento">Data de Nascimento:</label>
-                <input type="date" id="nascimento" name="nascimento">
-            </section>
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
 
-            <section>
-                <label>Interesses:</label>
+            <label>Interesses:</label>
+            <div>
                 <input type="checkbox" id="esporte" name="interesse" value="esporte">
                 <label for="esporte">Esporte</label>
+            </div>
+            <div>
                 <input type="checkbox" id="arte" name="interesse" value="arte">
                 <label for="arte">Arte</label>
+            </div>
+            <div>
                 <input type="checkbox" id="musica" name="interesse" value="musica">
                 <label for="musica">Música</label>
-            </section>
+            </div>
 
-            <section>
-                <label for="cor-preferida">Cor Preferida:</label>
-                <input type="color" id="cor-preferida" name="cor-preferida">
-            </section>
+            <label for="cor-preferida">Cor Preferida:</label>
+            <input type="color" id="cor-preferida" name="cor-preferida">
 
             <button type="submit">Enviar</button>
         </form>
