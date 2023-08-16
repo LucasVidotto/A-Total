@@ -3,146 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Formulário</title>
+    <title>New Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #c327c8;
             margin: 0;
             padding: 0;
         }
-
-        header {
-            background-color: #343a40;
+        header{
+            background-color: #16eb0f;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 16px 0;
         }
-
-        main {
+        main{
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 32px;
             background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
         }
-
-        form {
+        form{
             display: grid;
-            gap: 1.5rem;
+            gap: 24px;
         }
-
-        label {
+        label{
             font-weight: bold;
+            font-size: 24px;
             color: #343a40;
         }
 
-        input, textarea, select {
+        input, textarea, select{
             width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #d2d5d8;
             font-size: 16px;
         }
 
-        label {
+        label{
             display: block;
             font-weight: bold;
             color: #343a40;
-            margin-bottom: 0.5rem;
-            transform-origin: top left;
-            transition: transform 0.3s ease-out;
+            margin-bottom: 8px;
         }
 
-        /* Estilizando rótulos flutuantes */
-        input:focus ~ label, textarea:focus ~ label, select:focus ~ label {
-            transform: translateY(-1.2rem) scale(0.8);
-        }
-
-        /* Estilizando campos obrigatórios */
-        input:required:invalid, textarea:required:invalid, select:required:invalid {
-            border-color: #dc3545;
-        }
-
-        input:required:invalid + span, textarea:required:invalid + span, select:required:invalid + span {
-            display: block;
-            color: #dc3545;
-            font-size: 14px;
-            margin-top: 0.2rem;
-        }
-
-        /* Estilizando campos preenchidos corretamente */
-        input:required:valid, textarea:required:valid, select:required:valid {
-            border-color: #28a745;
-        }
-
-        input:required:valid + span, textarea:required:valid + span, select:required:valid + span {
-            display: none;
-        }
-
-        button {
-            background-color: #343a40;
-            color: #fff;
+        button{
+            background-color: #ec5050;
+            color:#000;
             border: none;
-            padding: 0.7rem 1rem;
-            border-radius: 6px;
-            font-size: 18px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #495057;
+        button:hover{
+            background-color: #ff0000;
         }
+        
+
     </style>
 </head>
 <body>
     <header>
         <h1>Formulário de Contato</h1>
     </header>
+
     <main>
         <form>
-           
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome"placeholder="Meu nome" value="Meu valor" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números, 10 dígitos">
+            <label for="tel">Telefone</label>
+            <input type="tel" id="tel" name="tel"  pattern="[0-9]{10}" placeholder="Apenas Numero" maxlength="10" minlength="2">
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            <label for="Number">Telefone</label>
+            <input type="number" id="Number" name="Number" >
 
-            <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
+            <label for="nasc">Data</label>
+            <input type="date" id="nasc" name="nasc" >
+            
+            <label for="Checkbox">Check</label>
+            <input type="checkbox" name="Checkbox" id="Checkbox">
+
+            <textarea name="Area" id="" cols="30" rows="10"></textarea>
+  
+            <label for="Color">Selecionar Cor</label>
+            <input type="color" name="Color" id="Color">  
+
+            <label for="files">Arraste um arquivo</label>
+            <input type="file" name="files" id="files">
+
+            <label for="pass">Senha</label>
+            <input type="password" name="pass" id="pass">
+
+            <label for="pass">Senha</label>
+            <input type="range" name="" id="">
+
+            <label for="carros">Selecionar Campos</label>
+            <select name="carros" id="carros">
+                <option value="BMW" >BMW</option>
+                <option value="Mustang">Mustang</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Ford" selected>Ford</option>
             </select>
 
-            <label for="nascimento">Data de Nascimento:</label>
-            <input type="date" id="nascimento" name="nascimento">
-
-            <label>Interesses:</label>
-            <div>
-                <input type="checkbox" id="esporte" name="interesse" value="esporte">
-                <label for="esporte">Esporte</label>
-            </div>
-            <div>
-                <input type="checkbox" id="arte" name="interesse" value="arte">
-                <label for="arte">Arte</label>
-            </div>
-            <div>
-                <input type="checkbox" id="musica" name="interesse" value="musica">
-                <label for="musica">Música</label>
-            </div>
-
-            <label for="cor-preferida">Cor Preferida:</label>
-            <input type="color" id="cor-preferida" name="cor-preferida">
-
-            <button type="submit">Enviar</button>
+            <button type="submit">Click Here</button>
         </form>
     </main>
 </body>

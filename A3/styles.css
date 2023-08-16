@@ -1,0 +1,87 @@
+/* Reset some default styles for consistency */
+body,
+h2,
+div,
+span {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for each section */
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Display: block */
+.block-box {
+  background-color: #f2a154;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Display: inline */
+.inline-box {
+  background-color: #81cfe0;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+/* Display: inline-block */
+.inline-block-box {
+  background-color: #c8c8c8;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100px;
+}
+
+/* Display: table */
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  background-color: #9ad3bc;
+  padding: 10px;
+}
+
+/* Display: grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #e0aaff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Justify Content */
+.justify-content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.justify-content-box {
+  background-color: #9ad3bc;
+  padding: 10px;
+}
+
+/* Align Items */
+.align-items-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.align-items-box {
+  background-color: #e0aaff;
+  padding: 10px;
+}
