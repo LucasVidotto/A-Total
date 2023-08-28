@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "footer footer";
+    grid-gap: 10px;
+  }
+
+  [grid-area="header"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+  }
+
+  [grid-area="content"] {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+
+  [grid-area="footer"] {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+
+  .second-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "box1 box2 box3"
+      "box4 box5 box6";
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+
+  [grid-area="box1"] {
+    background-color: #ff6347;
+    padding: 20px;
+    text-align: center;
+  }
+
+  [grid-area="box2"] {
+    background-color: #32cd32;
+    padding: 20px;
+    text-align: center;
+  }
+
+  [grid-area="box3"] {
+    background-color: #4169e1;
+    padding: 20px;
+    text-align: center;
+  }
+
+  [grid-area="box4"] {
+    background-color: #ffa500;
+    padding: 20px;
+    text-align: center;
+  }
+
+  [grid-area="box5"] {
+    background-color: #8a2be2;
+    padding: 20px;
+    text-align: center;
+  }
+
+  [grid-area="box6"] {
+    background-color: #f08080;
+    padding: 20px;
+    text-align: center;
+  }
+
+/*   [grid-area="box1"],
+  [grid-area="box2"],
+  [grid-area="box3"],
+  [grid-area="box4"],
+  [grid-area="box5"],
+  [grid-area="box6"] {
+    padding: 20px; 
+    text-align: center;
+    background-color: blue;
+  }
+
+  [grid-area="box4"] {
+    background-color: #ffa500;
+    padding: 50px; 
+  } */
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div grid-area="header">Header</div>
+  <div grid-area="content">Main Content</div>
+  <div grid-area="footer">Footer</div>
+</div>
+
+<div class="second-container">
+  <div grid-area="box1">Box 1</div>
+  <div grid-area="box2">Box 2</div>
+  <div grid-area="box3">Box 3</div>
+  <div grid-area="box4">Box 4</div>
+  <div grid-area="box5">Box 5</div>
+  <div grid-area="box6">Box 6</div>
+</div>
+
+</body>
+</html>

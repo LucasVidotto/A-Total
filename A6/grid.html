@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .grid-item {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Exemplo 1 */
+  .example-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Exemplo 2 */
+  .example-2 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  /* Exemplo 3 */
+  .example-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Estilos de fundo */
+  .example-1 .grid-item {
+    background-color: lightgray;
+  }
+
+  .example-2 .grid-item {
+    background-color: lightblue;
+  }
+
+  .example-3 .grid-item {
+    background-color: lightgreen;
+  }
+</style>
+<title>Exemplos de Grid</title>
+</head>
+<body>
+  <div class="grid-container example-1">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <div class="grid-container example-2">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div>
+
+  <div class="grid-container example-3">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+  </div>
+</body>
+</html>

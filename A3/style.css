@@ -1,0 +1,35 @@
+body,
+h2,
+div,
+span {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* display: flex, inline-flex, block, inline, none, table, table-row, table-cele; */
+
+section {
+  margin-bottom: 1.3rem;
+  padding: 1.3rem;
+  border: 3px solid black;
+}
+
+.container {
+  width: 96%;
+  height: 500px;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* y */
+  align-items: center; /* X */
+}
+
+.dois {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
